@@ -16,6 +16,9 @@ Esse arquivo é separado em três blocos.
 #### terraform init
 Quando o arquivo .tf já estiver criado com esse comando, ele baixa todas depêndencias necessárias para poder iniciar a criação da infra.
 
+#### terraform validate
+Verifica se encontra algum erro nos arquivos .tf
+
 #### terraform plan
 Mostra o que será feito quando o terraform for aplicado.
 
