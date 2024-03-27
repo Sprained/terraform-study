@@ -12,6 +12,9 @@ Esse arquivo é separado em três blocos.
 - provider: nessa parte configura o provedor, passando os parâmetros necessários para ele funcionar.
 - resource: essa parte é um componente da infra, vms, load balancing, bancos etc.
 
+### Terraform Status
+É recomendado que o status do terraform `terraform.tfstate` esteja armazenado na nuvem como na s3. Para facilitar o trabalho do time, não gerando conflitos na infra.
+
 ### Terraform commands
 #### terraform init
 Quando o arquivo .tf já estiver criado com esse comando, ele baixa todas depêndencias necessárias para poder iniciar a criação da infra.
@@ -27,6 +30,15 @@ Aplica tudo que foi listado no terraform plan. Criando ou modificando a infra.
 
 #### terraform destroy
 Deleta a infra atual.
+
+#### terraform state list
+Lista todos os recursos vinculados ao arquivo terraform.tfstate
+
+#### terraform state rm
+Deleta todos os recursos vinculados ao arquivo terraform.tfstate
+
+#### terraform state show
+Mostra detalhes dos recursos vinculados ao arquivo terraform.tfstate
 
 ## Recursos adicionais
 - Documentação do terraform: https://developer.hashicorp.com/terraform
