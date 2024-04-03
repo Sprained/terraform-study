@@ -15,6 +15,11 @@ Esse arquivo é separado em três blocos.
 ### Terraform Status
 É recomendado que o status do terraform `terraform.tfstate` esteja armazenado na nuvem como na s3. Para facilitar o trabalho do time, não gerando conflitos na infra.
 
+### Terraform Module
+Um módulo no Terraform é um conjunto de arquivos de configuração que representam um recurso ou um conjunto de recursos de infraestrutura. Esses arquivos podem incluir definições de recursos como servidores, redes, bancos de dados, entre outros. Os módulos podem ser compostos de recursos de qualquer provedor suportado pelo Terraform, como AWS, Azure, Google Cloud, entre outros.
+
+A principal vantagem do uso de módulos é a reutilização de código. Eles permitem encapsular configurações de infraestrutura em blocos que podem ser facilmente compartilhados, distribuídos e reutilizados em diferentes projetos e equipes. Isso promove a consistência, facilita a manutenção e reduz a duplicação de código.
+
 ### Terraform commands
 #### terraform init
 Quando o arquivo .tf já estiver criado com esse comando, ele baixa todas depêndencias necessárias para poder iniciar a criação da infra.
